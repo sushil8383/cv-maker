@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: darkgrey;
+    
+
+}
+
+#cv-template{
+    display: none;
+    
+}
+.background{
+    background-color:navy;
+    color: white;
+}
+
+.myimg{
+    border-radius: 50%;
+    width: 200px;
+}
