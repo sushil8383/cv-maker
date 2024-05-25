@@ -12,13 +12,13 @@
 </head>
 <body>
     <script src="cv.js"></script>
-    <div class="container-fluid" id="cv-form">
-    <div class="container">
+    <div class="container-fluid bg-warning fixed-top" id="nav" style="box-shadow:2px 2px 2px 2px white; height: 80px;">
         <h1 class="text-center">Resume Generator</h1>
-        <p class="text-center">By Sushil</p>
+        <p class="text-center">Developed & Designed by Sushil</p>
     </div>
-    <div class="row">
-        <div class="col-md-6">
+    <div class="container bg-warning" id="cv-form">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4">
             <h3>Personal Information</h3>
             <div class="form-group">
                 <label for="nameField">Your Name</label>
@@ -28,6 +28,12 @@
                 <label for="contactField">Your Contact</label>
                 <input type="text" class="form-control" id="contactField">
             </div>
+
+            <div class="form-group">
+                <label for="contactField">Your Email-id</label>
+                <input type="text" class="form-control" id="mailField">
+            </div>
+
             <div class="form-group">
                 <label for="addressField">Your Address</label>
                 <textarea rows="5" id="addressField" class="form-control"></textarea>
@@ -41,17 +47,14 @@
 
             <p class="text-secondary my-3">Important Links</p>
             <div class="form-group mt-2">
-                <label for="fbField">Facebook</label>
-                <input type="text" class="form-control" id="fbField">
+                <label for="gtField">Github</label>
+                <input type="text" class="form-control" id="gtField">
             </div>
             <div class="form-group mt-2">
                 <label for="linkField">Linkedin</label>
                 <input type="text" class="form-control" id="linkField">
             </div>
-            <div class="form-group mt-2">
-                <label for="instaField">Instagram</label>
-                <input type="text" class="form-control" id="instaField">
-            </div>
+           
 
         </div>
         <div class="col-md-6">
@@ -60,9 +63,18 @@
                 <label for="">Objective</label>
                 <textarea id="objective" class="form-control" rows="5"></textarea>
             </div>
+
+            <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualification</label>
+                <textarea class="form-control aqField " rows="2"></textarea>
+                <div class="container text-center mt-2" id="aqButton">
+                    <button onclick="addNewAqField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+            </div>
+
             <div class="form-group mt-2" id="we">
                 <label for="">Work Experience</label>
-                <textarea  class="form-control weField " rows="3">
+                <textarea  class="form-control weField " rows="2">
                 </textarea>
                 
                 <div class="container text-center mt-2" id="weButton">
@@ -71,16 +83,18 @@
                 </div>
                 
             </div>
-            <div class="form-group mt-2" id="aq">
-                <label for="">Academic Qualification</label>
-                <textarea class="form-control aqField " rows="3"></textarea>
-                <div class="container text-center mt-2" id="aqButton">
-                    <button onclick="addNewAqField()" class="btn btn-primary btn-sm">Add</button>
+
+            <div class="form-group mt-2" id="pr">
+                <label for="">Projects</label>
+                <textarea class="form-control prField " rows="2"></textarea>
+                <div class="container text-center mt-2" id="prButton">
+                    <button onclick="addNewPrField()" class="btn btn-primary btn-sm">Add</button>
                 </div>
             </div>
+            
         </div>
     </div>
-        <div class="container text-center mt-3 mb-5">
+        <div class="container text-center mt-3 mb-1">
             <button class="btn btn-primary btn-lg"
              onclick="generateCV()">Generate CV</button>
         </div>
@@ -98,14 +112,15 @@
                 <div class="container">
                     <p id="tname">Sushil Kumar</p>
                     <p id="tnumber">+91 8383861137</p>
+                    <p id="tmail">sushil@gmail.com</p>
                     <p id="taddress">n/g sector 52 Delhi India</p>
 
                     <hr />
-                    <p><a  id="tface" href="http://">www.facebook.com</a>
+                    <p><a  id="tgithub" href="http://">www.Github.com</a>
                     </p>
                     <p><a id="tlink" href="http://">www.linkedin.com</a>
                     </p>
-                    <p><a id="tinsta" href="http://">www.instagram.com</a></p>
+                
                 </div>
 
             </div>
@@ -114,7 +129,7 @@
                  style="font-weight: 980;">
                  Sushil Kumar
                 </h1>
-                <div class="card mt-4"> 
+                <div class=" mt-4"> 
                     <div class="card-header background">
                         <h3>Objective</h3>
                     </div><div class="card-body">
@@ -127,7 +142,20 @@
 
                 </div>
 
-                <div class="card mt-4"> 
+                <div class=" mt-4"> 
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div><div class="card-body">
+                       <ul id="taq">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                       </ul>
+                    </div>
+
+                </div>
+
+                <div class=" mt-4"> 
                     <div class="card-header background">
                         <h3>Work Experience</h3>
                     </div><div class="card-body">
@@ -140,18 +168,20 @@
 
                 </div>
 
-                <div class="card mt-4"> 
+                <div class=" mt-4"> 
                     <div class="card-header background">
-                        <h3>Academic Qualification</h3>
+                        <h3>Projects</h3>
                     </div><div class="card-body">
-                       <ul id="taq">
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                       </ul>
+                        <ul id="tpr">
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, numquam.</li>
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, ratione!</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, quis.</li>
+                        </ul>
                     </div>
 
                 </div>
+
+               
                 <div class="container mt-4 text-center">
                     <button onclick="printCV()" class="btn background">
                         Print CV
