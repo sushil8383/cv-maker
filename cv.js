@@ -3,7 +3,7 @@ function addNewWeField(){
     let newNode = document.createElement("textarea");
     newNode.classList.add("form-control");
     newNode.classList.add("weField");
-    newNode.setAttribute("rows",3);
+    newNode.setAttribute("rows",2);
 
     let weObj = document.getElementById("we");
     let weButton=document.getElementById("weButton");
@@ -16,13 +16,24 @@ function addNewAqField(){
     let newNode  = document.createElement("textarea");
     newNode.classList.add("form-control");
     newNode.classList.add("aqField");
-    newNode.setAttribute("rows",3);
+    newNode.setAttribute("rows",2);
 
     let aqObj = document.getElementById("aq");
     let aqButton = document.getElementById("aqButton");
 
     aqObj.insertBefore(newNode, aqButton);
 
+}
+
+function addNewPrField(){
+    let newNode = document.createElement("textarea");
+    newNode.classList.add("form-control");
+    newNode.classList.add("prField");
+    newNode.setAttribute("rows",2);
+
+    let prObj = document.getElementById("pr");
+    let prButton = document.getElementById("prButton");
+    prObj.insertBefore(newNode, prButton);
 }
 
 
@@ -36,15 +47,17 @@ function generateCV()
     document.getElementById("tnumber").innerHTML = 
     document.getElementById("contactField").value;
 
+    document.getElementById("tmail").innerHTML= 
+    document.getElementById("mailField").value;
+
     document.getElementById("taddress").innerHTML = 
     document.getElementById("addressField").value;
 
-    document.getElementById("tface").innerHTML = 
-    document.getElementById("fbField").value;
+    document.getElementById("tgithub").innerHTML = 
+    document.getElementById("gtField").value;
     document.getElementById("tlink").innerHTML = 
     document.getElementById("linkField").value;
-    document.getElementById("tinsta").innerHTML = 
-    document.getElementById("instaField").value;
+
 
 
     document.getElementById("tobject").innerHTML = 
@@ -64,6 +77,15 @@ function generateCV()
     }
     document.getElementById("taq").innerHTML = str1;
 
+    let prs = document.getElementsByClassName("prField");
+    let str2="";
+    for(let e of prs) {
+        str2 = str2 + `<li>${e.value} </li>`;
+      
+    }
+    document.getElementById("tpr").innerHTML = str2;
+    
+
 
     //image
     let file = document.getElementById("imgField").files[0];
@@ -82,6 +104,8 @@ function generateCV()
 
     document.getElementById("cv-form").style.display = "none";
     document.getElementById("cv-template").style.display = "block";
+
+    document.getElementById("nav").style.display="none";
 
     
     
