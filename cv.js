@@ -112,9 +112,18 @@ function generateCV()
 }
 
 
+
 function printCV(){
     window.print();
 }
+
+function createCV(){
+    document.getElementById("cv-form").style.display="block";
+    
+    window.scroll();
+}
+
+
 
 
 
