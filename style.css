@@ -7,7 +7,7 @@
 }
 #cv-form{
     margin-top: 100px;
-    display:none;
+    display: none;
 }
 
 #cv-template{
@@ -38,3 +38,14 @@
     text-transform: uppercase;
     
 }
+
+.center-div{
+    position: relative;
+    margin-top: 20%;
+    margin-left: 40%;
+    transform: translate(-20%,-40%);
+
+}
+
+
+
