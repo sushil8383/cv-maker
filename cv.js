@@ -108,7 +108,6 @@ function generateCV()
     document.getElementById("nav").style.display="none";
     document.getElementById("pr-builder").style.display="none";
 
-    
 
     
     
@@ -117,18 +116,29 @@ function generateCV()
 
 
 function printCV(){
-    window.print();
-    document.getElementById("pr-builder").style.display="none";
 
+    window.print();
+    
+}
+
+
+document.onload =function(){
+    createCV();
+    
 }
 
 function createCV(){
-    document.getElementById("cv-form").style.display="block";
-    
-    window.scroll();
+   document.getElementById("cv-form").style.display="block";
+    document.getElementById("createCVButton").style.display = "none";
+    document.getElementById("footer").style.display= "none"
+    document.getElementById("into").style.display="none"
+    document.getElementById("navd").style.display="none"
+
 }
 
-
+window.onloadend = function(){
+    createCV();
+}
 
 
 
