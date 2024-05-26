@@ -111,6 +111,7 @@ function generateCV()
     
 }
 
+
 function printCV(){
     window.print();
 }
