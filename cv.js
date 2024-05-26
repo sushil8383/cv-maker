@@ -106,6 +106,9 @@ function generateCV()
     document.getElementById("cv-template").style.display = "block";
 
     document.getElementById("nav").style.display="none";
+    document.getElementById("pr-builder").style.display="none";
+
+    
 
     
     
