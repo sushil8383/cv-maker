@@ -6,16 +6,189 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <title>CV Maker</title>
     
 </head>
 <body>
     <script src="cv.js"></script>
-    <div class="container-fluid bg-warning fixed-top" id="nav" style="box-shadow:2px 2px 2px 2px white; height: 80px;">
-        <h1 class="text-center">Resume Generator</h1>
-        <p class="text-center">Developed & Designed by Sushil</p>
+<div class="container-fluid"  id="pr-buider">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Probuilder.com</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto text-center mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://sushil8383.github.io/itsmesushil/Portfolio" target="_blank">About</a>
+              </li>
+                
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+
+      <section class="intro">
+        <div class="container mt-5">
+            <div class="row text-center" style="margin-top: 100px;">
+                <div class="col-md-6" style="text-align: start;">
+                    <h2>Free resume builder for modern job seekers</h2>
+                    <p class="mt-3">"Create professional resumes effortlessly with 
+                        our CV builder. Choose from templates, add your information,
+                         and download instantly. Perfect for job seekers looking to stand out.
+                         Start now!"
+                    </p>
+                    <button id="createCVButton" 
+                    class=" mt-2 btn btn-primary mb-2">
+                    <a class="text-decoration-none text-white"
+                     href="https://sushil8383.github.io/cv-maker" target="_blank">Create your CV</a></button>
+                </div>
+                <div class="col-md-6 ">
+                    <img class="img-fluid  " src="data:image/png;base64,iVBORw0KGgoAAAANSUh
+                    EUgAAASkAAACqCAMAAADGFElyAAAB41BMVEX///8AAABMkrW64Pb54NIZEkU4dZn2oZ79
+                    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
+                    EeV8quzKkpYkSidOAucOJ7iEdEgNPTA7GQCWbZb2nPVLJtUcqqfZIJdUeqaT6fwM5xRLj+ykbAAAAAElFTkSuQmCC"  alt="">
+                    
+                </div>
+            </div>
+        </div>
+      </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted mt-5">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Probuider.com
+            </h6>
+            <p>
+                "Create professional resumes effortlessly with 
+                our CV builder. Choose from templates, add your information,
+                 and download instantly. Perfect for job seekers looking to stand out.
+                 Start now!"
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Html</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Css</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Javascript</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fa fa-home me-3"></i>Lakkarpur, Faridabad Haryana 121009</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>
+              dddtripled5102001@gmail.com
+            </p>
+            <p><i class="fa fa-phone me-3"></i> + 91 8383861137</p>
+            <p><i class="fa fa-print me-3"></i> + 91 1234567890</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="">Probuilder.com</a>
     </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+  
     <div class="container bg-warning" id="cv-form">
     <div class="row d-flex justify-content-center">
         <div class="col-md-4">
