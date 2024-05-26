@@ -122,10 +122,7 @@ function printCV(){
 }
 
 
-document.onload =function(){
-    createCV();
-    
-}
+
 
 function createCV(){
    document.getElementById("cv-form").style.display="block";
