@@ -118,6 +118,8 @@ function generateCV()
 
 function printCV(){
     window.print();
+    document.getElementById("pr-builder").style.display="none";
+
 }
 
 function createCV(){
